@@ -1,0 +1,13 @@
+{
+	"name": "bloc-customises",
+	"private": true,
+	"author": "Pierre Lejeune (pierrelejeune.fr)",
+	"devDependencies": {
+		"@wordpress/components": "^19.7.0",
+		"@wordpress/scripts": "^22.3.0"
+	},
+	"scripts": {
+		"start": "wp-scripts start src/index.js --output-path=build",
+		"build": "wp-scripts build src/index.js --output-path=build"
+	}
+}

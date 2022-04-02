@@ -1,0 +1,37 @@
+body.wp-admin{
+    .bloc-customises-responsive-spacer-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        >div{
+            display: block;
+            position: relative;
+            background-color: rgba(0,0,0,.1);
+            &::before{
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-size: 14px;
+            }
+            &.bloc-customises-responsive-spacer-mobile::before{
+                content: "Mobile"
+            }
+            &.bloc-customises-responsive-spacer-desktop::before{
+                content: "Ordinateur"
+            }
+        };
+    }
+}
+body:not(.wp-admin){
+    .bloc-customises-responsive-spacer-container{
+        @media (min-width: 360px) {
+            .bloc-customises-responsive-spacer-mobile{
+                display: none;
+            }
+        }
+        @media (max-width: 360px) {
+            .bloc-customises-responsive-spacer-desktop{
+                display: none;
+            }
+        }
+    }
+}
